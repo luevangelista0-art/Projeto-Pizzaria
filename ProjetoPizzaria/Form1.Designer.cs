@@ -31,7 +31,7 @@
             this.chkCebola = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblValorpizza = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtValorPizza = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cmbTamanhoPizza = new System.Windows.Forms.ComboBox();
             this.grpOpcionais = new System.Windows.Forms.GroupBox();
@@ -42,6 +42,8 @@
             this.chkBorda = new System.Windows.Forms.CheckBox();
             this.chkCatupiry = new System.Windows.Forms.CheckBox();
             this.chkTempero = new System.Windows.Forms.CheckBox();
+            this.txtValorOpcionais = new System.Windows.Forms.TextBox();
+            this.txtValorPagar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grpOpcionais.SuspendLayout();
             this.SuspendLayout();
@@ -74,12 +76,12 @@
             this.lblValorpizza.Text = "VALOR DA PIZZA";
             this.lblValorpizza.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtValorPizza
             // 
-            this.textBox1.Location = new System.Drawing.Point(162, 305);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtValorPizza.Location = new System.Drawing.Point(266, 42);
+            this.txtValorPizza.Name = "txtValorPizza";
+            this.txtValorPizza.Size = new System.Drawing.Size(100, 20);
+            this.txtValorPizza.TabIndex = 3;
             // 
             // button1
             // 
@@ -178,11 +180,27 @@
             this.chkTempero.Text = "Tempero";
             this.chkTempero.UseVisualStyleBackColor = true;
             // 
+            // txtValorOpcionais
+            // 
+            this.txtValorOpcionais.Location = new System.Drawing.Point(404, 42);
+            this.txtValorOpcionais.Name = "txtValorOpcionais";
+            this.txtValorOpcionais.Size = new System.Drawing.Size(100, 20);
+            this.txtValorOpcionais.TabIndex = 11;
+            // 
+            // txtValorPagar
+            // 
+            this.txtValorPagar.Location = new System.Drawing.Point(529, 42);
+            this.txtValorPagar.Name = "txtValorPagar";
+            this.txtValorPagar.Size = new System.Drawing.Size(100, 20);
+            this.txtValorPagar.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 474);
+            this.Controls.Add(this.txtValorPagar);
+            this.Controls.Add(this.txtValorOpcionais);
             this.Controls.Add(this.lblValorPagar);
             this.Controls.Add(this.lblValorOpcionais);
             this.Controls.Add(this.button3);
@@ -190,7 +208,7 @@
             this.Controls.Add(this.grpOpcionais);
             this.Controls.Add(this.cmbTamanhoPizza);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtValorPizza);
             this.Controls.Add(this.lblValorpizza);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
@@ -208,7 +226,7 @@
         private System.Windows.Forms.CheckBox chkCebola;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblValorpizza;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtValorPizza;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmbTamanhoPizza;
         private System.Windows.Forms.GroupBox grpOpcionais;
@@ -219,6 +237,8 @@
         private System.Windows.Forms.CheckBox chkTempero;
         private System.Windows.Forms.CheckBox chkCatupiry;
         private System.Windows.Forms.CheckBox chkBorda;
+        private System.Windows.Forms.TextBox txtValorOpcionais;
+        private System.Windows.Forms.TextBox txtValorPagar;
     }
 }
 
