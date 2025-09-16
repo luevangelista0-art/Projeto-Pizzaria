@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.chkCebola = new System.Windows.Forms.CheckBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvgPedido = new System.Windows.Forms.DataGridView();
             this.lblValorpizza = new System.Windows.Forms.Label();
             this.txtValorPizza = new System.Windows.Forms.TextBox();
             this.btnNovo = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.lblPesquisar = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgPedido)).BeginInit();
             this.grpOpcionais.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,13 +61,13 @@
             this.chkCebola.Text = "Cebola sem choro";
             this.chkCebola.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dvgPedido
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(266, 197);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(465, 152);
-            this.dataGridView1.TabIndex = 1;
+            this.dvgPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgPedido.Location = new System.Drawing.Point(266, 197);
+            this.dvgPedido.Name = "dvgPedido";
+            this.dvgPedido.Size = new System.Drawing.Size(465, 152);
+            this.dvgPedido.TabIndex = 1;
             // 
             // lblValorpizza
             // 
@@ -243,10 +243,10 @@
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.txtValorPizza);
             this.Controls.Add(this.lblValorpizza);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dvgPedido);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgPedido)).EndInit();
             this.grpOpcionais.ResumeLayout(false);
             this.grpOpcionais.PerformLayout();
             this.ResumeLayout(false);
@@ -257,7 +257,7 @@
         #endregion
 
         private System.Windows.Forms.CheckBox chkCebola;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dvgPedido;
         private System.Windows.Forms.Label lblValorpizza;
         private System.Windows.Forms.TextBox txtValorPizza;
         private System.Windows.Forms.Button btnNovo;
