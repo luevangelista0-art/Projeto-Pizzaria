@@ -32,11 +32,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblValorpizza = new System.Windows.Forms.Label();
             this.txtValorPizza = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
             this.cmbTamanhoPizza = new System.Windows.Forms.ComboBox();
             this.grpOpcionais = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblValorOpcionais = new System.Windows.Forms.Label();
             this.lblValorPagar = new System.Windows.Forms.Label();
             this.chkBorda = new System.Windows.Forms.CheckBox();
@@ -44,6 +44,9 @@
             this.chkTempero = new System.Windows.Forms.CheckBox();
             this.txtValorOpcionais = new System.Windows.Forms.TextBox();
             this.txtValorPagar = new System.Windows.Forms.TextBox();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
+            this.lblPesquisar = new System.Windows.Forms.Label();
+            this.btnSair = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.grpOpcionais.SuspendLayout();
             this.SuspendLayout();
@@ -61,9 +64,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(309, 267);
+            this.dataGridView1.Location = new System.Drawing.Point(266, 197);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(465, 152);
             this.dataGridView1.TabIndex = 1;
             // 
             // lblValorpizza
@@ -83,14 +86,14 @@
             this.txtValorPizza.Size = new System.Drawing.Size(100, 20);
             this.txtValorPizza.TabIndex = 3;
             // 
-            // button1
+            // btnNovo
             // 
-            this.button1.Location = new System.Drawing.Point(29, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNovo.Location = new System.Drawing.Point(308, 397);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(75, 23);
+            this.btnNovo.TabIndex = 4;
+            this.btnNovo.Text = "NOVO";
+            this.btnNovo.UseVisualStyleBackColor = true;
             // 
             // cmbTamanhoPizza
             // 
@@ -114,23 +117,23 @@
             this.grpOpcionais.TabStop = false;
             this.grpOpcionais.Text = "Escolhas opcionais";
             // 
-            // button2
+            // btnSalvar
             // 
-            this.button2.Location = new System.Drawing.Point(137, 394);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSalvar.Location = new System.Drawing.Point(416, 397);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 7;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnCancelar
             // 
-            this.button3.Location = new System.Drawing.Point(12, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(514, 397);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // lblValorOpcionais
             // 
@@ -194,20 +197,50 @@
             this.txtValorPagar.Size = new System.Drawing.Size(100, 20);
             this.txtValorPagar.TabIndex = 12;
             // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Location = new System.Drawing.Point(448, 144);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(100, 20);
+            this.txtPesquisar.TabIndex = 14;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lblPesquisar
+            // 
+            this.lblPesquisar.AutoSize = true;
+            this.lblPesquisar.Location = new System.Drawing.Point(347, 148);
+            this.lblPesquisar.Name = "lblPesquisar";
+            this.lblPesquisar.Size = new System.Drawing.Size(69, 13);
+            this.lblPesquisar.TabIndex = 13;
+            this.lblPesquisar.Text = "PESQUISAR";
+            this.lblPesquisar.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(617, 397);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 23);
+            this.btnSair.TabIndex = 15;
+            this.btnSair.Text = "SAIR";
+            this.btnSair.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 474);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.txtPesquisar);
+            this.Controls.Add(this.lblPesquisar);
             this.Controls.Add(this.txtValorPagar);
             this.Controls.Add(this.txtValorOpcionais);
             this.Controls.Add(this.lblValorPagar);
             this.Controls.Add(this.lblValorOpcionais);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.grpOpcionais);
             this.Controls.Add(this.cmbTamanhoPizza);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.txtValorPizza);
             this.Controls.Add(this.lblValorpizza);
             this.Controls.Add(this.dataGridView1);
@@ -227,11 +260,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblValorpizza;
         private System.Windows.Forms.TextBox txtValorPizza;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.ComboBox cmbTamanhoPizza;
         private System.Windows.Forms.GroupBox grpOpcionais;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblValorOpcionais;
         private System.Windows.Forms.Label lblValorPagar;
         private System.Windows.Forms.CheckBox chkTempero;
@@ -239,6 +272,9 @@
         private System.Windows.Forms.CheckBox chkBorda;
         private System.Windows.Forms.TextBox txtValorOpcionais;
         private System.Windows.Forms.TextBox txtValorPagar;
+        private System.Windows.Forms.TextBox txtPesquisar;
+        private System.Windows.Forms.Label lblPesquisar;
+        private System.Windows.Forms.Button btnSair;
     }
 }
 
