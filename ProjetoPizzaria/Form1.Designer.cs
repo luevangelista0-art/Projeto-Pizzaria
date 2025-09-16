@@ -28,29 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkCebola = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblValorpizza = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.cmbTamanhoPizza = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpOpcionais = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lblValorOpcionais = new System.Windows.Forms.Label();
+            this.lblValorPagar = new System.Windows.Forms.Label();
+            this.chkBorda = new System.Windows.Forms.CheckBox();
+            this.chkCatupiry = new System.Windows.Forms.CheckBox();
+            this.chkTempero = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grpOpcionais.SuspendLayout();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // chkCebola
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(17, 19);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkCebola.AutoSize = true;
+            this.chkCebola.Location = new System.Drawing.Point(6, 42);
+            this.chkCebola.Name = "chkCebola";
+            this.chkCebola.Size = new System.Drawing.Size(111, 17);
+            this.chkCebola.TabIndex = 0;
+            this.chkCebola.Text = "Cebola sem choro";
+            this.chkCebola.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -72,7 +76,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(29, 217);
+            this.textBox1.Location = new System.Drawing.Point(162, 305);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 3;
@@ -95,15 +99,18 @@
             this.cmbTamanhoPizza.TabIndex = 5;
             this.cmbTamanhoPizza.Text = "TAMANHO DA PIZZA";
             // 
-            // groupBox1
+            // grpOpcionais
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 91);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.grpOpcionais.Controls.Add(this.chkTempero);
+            this.grpOpcionais.Controls.Add(this.chkCatupiry);
+            this.grpOpcionais.Controls.Add(this.chkBorda);
+            this.grpOpcionais.Controls.Add(this.chkCebola);
+            this.grpOpcionais.Location = new System.Drawing.Point(12, 81);
+            this.grpOpcionais.Name = "grpOpcionais";
+            this.grpOpcionais.Size = new System.Drawing.Size(200, 125);
+            this.grpOpcionais.TabIndex = 6;
+            this.grpOpcionais.TabStop = false;
+            this.grpOpcionais.Text = "Escolhas opcionais";
             // 
             // button2
             // 
@@ -132,15 +139,55 @@
             this.lblValorOpcionais.TabIndex = 9;
             this.lblValorOpcionais.Text = "VALOR DOS OPCIONAIS";
             // 
+            // lblValorPagar
+            // 
+            this.lblValorPagar.AutoSize = true;
+            this.lblValorPagar.Location = new System.Drawing.Point(536, 22);
+            this.lblValorPagar.Name = "lblValorPagar";
+            this.lblValorPagar.Size = new System.Drawing.Size(93, 13);
+            this.lblValorPagar.TabIndex = 10;
+            this.lblValorPagar.Text = "VALOR A PAGAR";
+            // 
+            // chkBorda
+            // 
+            this.chkBorda.AutoSize = true;
+            this.chkBorda.Location = new System.Drawing.Point(6, 19);
+            this.chkBorda.Name = "chkBorda";
+            this.chkBorda.Size = new System.Drawing.Size(107, 17);
+            this.chkBorda.TabIndex = 1;
+            this.chkBorda.Text = "Borda Recheada";
+            this.chkBorda.UseVisualStyleBackColor = true;
+            // 
+            // chkCatupiry
+            // 
+            this.chkCatupiry.AutoSize = true;
+            this.chkCatupiry.Location = new System.Drawing.Point(6, 65);
+            this.chkCatupiry.Name = "chkCatupiry";
+            this.chkCatupiry.Size = new System.Drawing.Size(102, 17);
+            this.chkCatupiry.TabIndex = 2;
+            this.chkCatupiry.Text = "Catupiry Original";
+            this.chkCatupiry.UseVisualStyleBackColor = true;
+            // 
+            // chkTempero
+            // 
+            this.chkTempero.AutoSize = true;
+            this.chkTempero.Location = new System.Drawing.Point(6, 88);
+            this.chkTempero.Name = "chkTempero";
+            this.chkTempero.Size = new System.Drawing.Size(68, 17);
+            this.chkTempero.TabIndex = 3;
+            this.chkTempero.Text = "Tempero";
+            this.chkTempero.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 474);
+            this.Controls.Add(this.lblValorPagar);
             this.Controls.Add(this.lblValorOpcionais);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpOpcionais);
             this.Controls.Add(this.cmbTamanhoPizza);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -149,8 +196,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpOpcionais.ResumeLayout(false);
+            this.grpOpcionais.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,16 +205,20 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkCebola;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblValorpizza;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cmbTamanhoPizza;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpOpcionais;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblValorOpcionais;
+        private System.Windows.Forms.Label lblValorPagar;
+        private System.Windows.Forms.CheckBox chkTempero;
+        private System.Windows.Forms.CheckBox chkCatupiry;
+        private System.Windows.Forms.CheckBox chkBorda;
     }
 }
 
