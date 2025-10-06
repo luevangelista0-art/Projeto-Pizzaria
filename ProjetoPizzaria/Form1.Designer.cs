@@ -35,13 +35,13 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.cmbTamanhoPizza = new System.Windows.Forms.ComboBox();
             this.grpOpcionais = new System.Windows.Forms.GroupBox();
+            this.chkTempero = new System.Windows.Forms.CheckBox();
+            this.chkCatupiry = new System.Windows.Forms.CheckBox();
+            this.chkBorda = new System.Windows.Forms.CheckBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCalcular = new System.Windows.Forms.Button();
             this.lblValorOpcionais = new System.Windows.Forms.Label();
             this.lblValorPagar = new System.Windows.Forms.Label();
-            this.chkBorda = new System.Windows.Forms.CheckBox();
-            this.chkCatupiry = new System.Windows.Forms.CheckBox();
-            this.chkTempero = new System.Windows.Forms.CheckBox();
             this.txtValorOpcionais = new System.Windows.Forms.TextBox();
             this.txtValorPagar = new System.Windows.Forms.TextBox();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
@@ -68,6 +68,7 @@
             this.dvgPedido.Name = "dvgPedido";
             this.dvgPedido.Size = new System.Drawing.Size(465, 152);
             this.dvgPedido.TabIndex = 1;
+            this.dvgPedido.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgPedido_CellContentClick);
             // 
             // lblValorpizza
             // 
@@ -117,6 +118,36 @@
             this.grpOpcionais.TabStop = false;
             this.grpOpcionais.Text = "Escolhas opcionais";
             // 
+            // chkTempero
+            // 
+            this.chkTempero.AutoSize = true;
+            this.chkTempero.Location = new System.Drawing.Point(6, 88);
+            this.chkTempero.Name = "chkTempero";
+            this.chkTempero.Size = new System.Drawing.Size(68, 17);
+            this.chkTempero.TabIndex = 3;
+            this.chkTempero.Text = "Tempero";
+            this.chkTempero.UseVisualStyleBackColor = true;
+            // 
+            // chkCatupiry
+            // 
+            this.chkCatupiry.AutoSize = true;
+            this.chkCatupiry.Location = new System.Drawing.Point(6, 65);
+            this.chkCatupiry.Name = "chkCatupiry";
+            this.chkCatupiry.Size = new System.Drawing.Size(102, 17);
+            this.chkCatupiry.TabIndex = 2;
+            this.chkCatupiry.Text = "Catupiry Original";
+            this.chkCatupiry.UseVisualStyleBackColor = true;
+            // 
+            // chkBorda
+            // 
+            this.chkBorda.AutoSize = true;
+            this.chkBorda.Location = new System.Drawing.Point(6, 19);
+            this.chkBorda.Name = "chkBorda";
+            this.chkBorda.Size = new System.Drawing.Size(107, 17);
+            this.chkBorda.TabIndex = 1;
+            this.chkBorda.Text = "Borda Recheada";
+            this.chkBorda.UseVisualStyleBackColor = true;
+            // 
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(416, 397);
@@ -126,14 +157,15 @@
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
-            // btnCancelar
+            // btnCalcular
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(514, 397);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCalcular.Location = new System.Drawing.Point(514, 397);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.TabIndex = 8;
+            this.btnCalcular.Text = "CALCULAR";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblValorOpcionais
             // 
@@ -152,36 +184,6 @@
             this.lblValorPagar.Size = new System.Drawing.Size(93, 13);
             this.lblValorPagar.TabIndex = 10;
             this.lblValorPagar.Text = "VALOR A PAGAR";
-            // 
-            // chkBorda
-            // 
-            this.chkBorda.AutoSize = true;
-            this.chkBorda.Location = new System.Drawing.Point(6, 19);
-            this.chkBorda.Name = "chkBorda";
-            this.chkBorda.Size = new System.Drawing.Size(107, 17);
-            this.chkBorda.TabIndex = 1;
-            this.chkBorda.Text = "Borda Recheada";
-            this.chkBorda.UseVisualStyleBackColor = true;
-            // 
-            // chkCatupiry
-            // 
-            this.chkCatupiry.AutoSize = true;
-            this.chkCatupiry.Location = new System.Drawing.Point(6, 65);
-            this.chkCatupiry.Name = "chkCatupiry";
-            this.chkCatupiry.Size = new System.Drawing.Size(102, 17);
-            this.chkCatupiry.TabIndex = 2;
-            this.chkCatupiry.Text = "Catupiry Original";
-            this.chkCatupiry.UseVisualStyleBackColor = true;
-            // 
-            // chkTempero
-            // 
-            this.chkTempero.AutoSize = true;
-            this.chkTempero.Location = new System.Drawing.Point(6, 88);
-            this.chkTempero.Name = "chkTempero";
-            this.chkTempero.Size = new System.Drawing.Size(68, 17);
-            this.chkTempero.TabIndex = 3;
-            this.chkTempero.Text = "Tempero";
-            this.chkTempero.UseVisualStyleBackColor = true;
             // 
             // txtValorOpcionais
             // 
@@ -236,7 +238,7 @@
             this.Controls.Add(this.txtValorOpcionais);
             this.Controls.Add(this.lblValorPagar);
             this.Controls.Add(this.lblValorOpcionais);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.grpOpcionais);
             this.Controls.Add(this.cmbTamanhoPizza);
@@ -246,6 +248,7 @@
             this.Controls.Add(this.dvgPedido);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgPedido)).EndInit();
             this.grpOpcionais.ResumeLayout(false);
             this.grpOpcionais.PerformLayout();
@@ -264,7 +267,7 @@
         private System.Windows.Forms.ComboBox cmbTamanhoPizza;
         private System.Windows.Forms.GroupBox grpOpcionais;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblValorOpcionais;
         private System.Windows.Forms.Label lblValorPagar;
         private System.Windows.Forms.CheckBox chkTempero;
